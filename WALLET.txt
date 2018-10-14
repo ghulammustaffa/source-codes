@@ -1,0 +1,60 @@
+#include<iostream.h>
+#include<conio.h>
+class Wallet
+{
+private:
+int Balance;
+public:
+Wallet(): Balance(0){}
+void Receipt(int amount)
+{
+Balance+=amount;
+}
+void payment(int amount)
+{
+if(amount<=Balance)
+{
+Balance-=amount;
+}
+else
+{
+cout<<"payment not made\n";
+}
+}
+void getBalance()
+{
+cout<<"Enter the balance";
+cin>>Balance;
+}
+void showBalance()
+{
+cout<<"Total balance is:"<<Balance<<endl;
+}
+};
+int main()
+{
+clrscr();
+Wallet w1;
+w1.showBalance();
+w1.Receipt(500);
+w1.showBalance();
+w1.payment(100);
+w1.showBalance();
+getch();
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
